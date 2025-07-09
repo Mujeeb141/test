@@ -1,0 +1,47 @@
+.slider{
+    height: 100vh;
+    overflow: hidden;
+}
+
+.slides{
+    width: 300vw;
+    display: flex;
+    flex-shrink: 0;
+    transition: margin-left 0.8s ease ;
+}
+
+.slide img{
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+.navigation-manual{
+    display: flex;
+    position: absolute;
+    gap: 10px;
+    width: 100vw;
+    justify-content: center;
+    bottom: 30px;
+}
+.radio-btn{
+    border: 3px solid red;
+    padding: 5px;
+    border-radius: 50px;
+    cursor: pointer;
+
+    /* gap: 10px; */
+}
+input[type="radio"]{
+    display: none;
+}
+
+#radio1:checked ~ .slides{
+    margin-left:0;
+}
+
+#radio2:checked ~ .slides{
+    margin-left:-100vw ;
+}
+#radio3:checked ~ .slides{
+    margin-left:-200vw ;
+}
